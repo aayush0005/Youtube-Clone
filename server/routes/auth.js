@@ -1,6 +1,5 @@
 const express = require("express");
 
-const passport = require("../config/passport");
 const errorResponse = require("../utils/error");
 const { generateToken } = require("../utils/jwt");
 const config = require("../config");
@@ -31,7 +30,6 @@ router.get(
       //Send credential cookies
       res
         .cookie("jwt_auth", token, {
-          maxAge: config.SESSION_DURATION * 60 * 1000,
           httpOnly: true,
           sameSite: true,
           secure: config.NODE_ENV === "production",
