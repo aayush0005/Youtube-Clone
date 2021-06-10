@@ -25,3 +25,4 @@ const methods = (channelSchema) => {
   };
 };
 module.exports = methods;
+
