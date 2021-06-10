@@ -4,6 +4,7 @@ const errorResponse = require("../utils/error");
 const ChannelSubscription = require("../models/channelSubscription");
 
 // Subscribe to a channel
+
 router.post("/", async (req, res) => {
   const subscriber = req.userId;
   const { channel } = req.body;
